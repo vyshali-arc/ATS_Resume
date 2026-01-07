@@ -20,7 +20,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 # GEMINI SETUP
 # ==============================
 # Use gemini-2.5-flash-preview-09-2025 as it is the supported model in this environment
-API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyDmKN0dtrlQOTvd8drLoiR4EejEuXg7zlA") 
+API_KEY = os.environ.get("GEMINI_API_KEY", "") 
 MODEL_NAME = 'gemini-2.5-flash-preview-09-2025'
 
 genai.configure(api_key=API_KEY)
@@ -139,4 +139,5 @@ def analyze():
 
 if __name__ == "__main__":
     # Ensure you set GEMINI_API_KEY in your environment variables
+
     app.run(debug=True, port=8080)
